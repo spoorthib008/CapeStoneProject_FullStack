@@ -65,58 +65,58 @@ CapeStoneProject_FullStack-master/
 
 ## 🧱 Domain Model (ERD)
 
-```mermaid
 erDiagram
-    USER ||--o| EMPLOYEE : "1 to 1"
-    EMPLOYEE ||--o{ LEAVEREQUEST : has
-    PAYROLLRUN ||--o{ PAYROLLITEM : contains
-    EMPLOYEE ||--o{ PAYROLLITEM : earns
+  USER ||--o| EMPLOYEE : "1 to 1"
+  EMPLOYEE ||--o{ LEAVE_REQUEST : has
+  PAYROLL_RUN ||--o{ PAYROLL_ITEM : contains
+  EMPLOYEE ||--o{ PAYROLL_ITEM : earns
 
-    USER {
-      bigint id PK
-      string username
-      string password (BCrypt)
-      string email
-      enum role (ADMIN|EMPLOYEE)
-      boolean enabled
-    }
-    EMPLOYEE {
-      bigint id PK
-      bigint user_id FK
-      string first_name
-      string last_name
-      date   dob
-      string phone
-      string address
-      string designation
-      string department
-      decimal base_salary
-    }
-    LEAVEREQUEST {
-      bigint id PK
-      bigint employee_id FK
-      date   start_date
-      date   end_date
-      enum   leave_type
-      enum   status (PENDING|APPROVED|REJECTED)
-      datetime created_at
-    }
-    PAYROLLRUN {
-      bigint id PK
-      int    year
-      int    month
-      enum   status (DRAFT|PROCESSED|LOCKED)
-      datetime created_at
-    }
-    PAYROLLITEM {
-      bigint id PK
-      bigint run_id FK
-      bigint employee_id FK
-      decimal basic_salary
-      decimal deductions
-      decimal bonus
-      decimal net_salary
-    }
+  USER {
+    bigint id PK
+    string username
+    string password
+    string email
+    string role
+    boolean enabled
+  }
+  EMPLOYEE {
+    bigint id PK
+    bigint user_id FK
+    string first_name
+    string last_name
+    date dob
+    string phone
+    string address
+    string designation
+    string department
+    decimal base_salary
+  }
+  LEAVE_REQUEST {
+    bigint id PK
+    bigint employee_id FK
+    date start_date
+    date end_date
+    string leave_type
+    string status
+    datetime created_at
+  }
+  PAYROLL_RUN {
+    bigint id PK
+    int year
+    int month
+    string status
+    datetime created_at
+  }
+  PAYROLL_ITEM {
+    bigint id PK
+    bigint run_id FK
+    bigint employee_id FK
+    decimal basic_salary
+    decimal deductions
+    decimal bonus
+    decimal net_salary
+  }
+
 ```
 
 ---
@@ -174,11 +174,9 @@ spring:
     hibernate:
       ddl-auto: update
 jwt:
-  secret: "<change-me-256-bit-secret>"
+  secret: "My_Secret_key"
   expiryMinutes: 120
 ```
-
-> ⚠️ Never commit real passwords or secrets. Use environment variables in production (e.g., `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET`).
 
 **Run**:
 ```bash
