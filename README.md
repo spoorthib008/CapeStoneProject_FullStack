@@ -258,13 +258,7 @@ UPDATE users SET role = 'ADMIN' WHERE username = '<your_username>';
 
 ---
 
-## 🤝 Contributing
 
-1. Fork the repo
-2. Create feature branch: `git checkout -b feature/awesome`
-3. Commit changes: `git commit -m "feat: add awesome"`
-4. Push: `git push origin feature/awesome`
-5. Open a Pull Request
 
 ---
 
