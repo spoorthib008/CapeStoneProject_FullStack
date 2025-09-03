@@ -362,12 +362,6 @@ UPDATE users SET role = 'ADMIN' WHERE username = '<your_username>';
 
 ---
 
-## 📄 License
-
-This project is for capstone/learning purposes. Add a license file if you plan to distribute.
-
----
-
 <p align="center">
   Built with ❤️ using <a href="https://spring.io/projects/spring-boot">Spring Boot</a>, 
   <a href="https://react.dev/">React</a> & <a href="https://www.mysql.com/">MySQL</a>.
