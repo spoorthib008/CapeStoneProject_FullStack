@@ -65,73 +65,15 @@ CapeStoneProject_FullStack-master/
 
 ## 🧱 Domain Model (ERD)
 
-erDiagram
-  USER ||--o| EMPLOYEE : "1 to 1"
-  EMPLOYEE ||--o{ LEAVE_REQUEST : has
-  PAYROLL_RUN ||--o{ PAYROLL_ITEM : contains
-  EMPLOYEE ||--o{ PAYROLL_ITEM : earns
 
-  USER {
-    bigint id PK
-    string username
-    string password
-    string email
-    string role
-    boolean enabled
-  }
-  EMPLOYEE {
-    bigint id PK
-    bigint user_id FK
-    string first_name
-    string last_name
-    date dob
-    string phone
-    string address
-    string designation
-    string department
-    decimal base_salary
-  }
-  LEAVE_REQUEST {
-    bigint id PK
-    bigint employee_id FK
-    date start_date
-    date end_date
-    string leave_type
-    string status
-    datetime created_at
-  }
-  PAYROLL_RUN {
-    bigint id PK
-    int year
-    int month
-    string status
-    datetime created_at
-  }
-  PAYROLL_ITEM {
-    bigint id PK
-    bigint run_id FK
-    bigint employee_id FK
-    decimal basic_salary
-    decimal deductions
-    decimal bonus
-    decimal net_salary
-  }
-
-```
 
 ---
 
-## 🔭 Architecture
+## 🧭 Architecture
+<p align="center">
+  <img src="C:\Users\Admin\Pictures\capestoneproject/payroll_architecture_min_v2.svg" width="900" alt="Payroll Management System Architecture" />
+</p>
 
-```mermaid
-flowchart LR
-  A[Browser] -->|React Router + Axios| B[React App (Vite)]
-  B -->|JWT in Authorization header| C[/Spring Boot REST API/]
-  C --> D[(Spring Security + JWT Filter)]
-  D --> E[(Services)]
-  E --> F[(JPA/Hibernate)]
-  F --> G[(MySQL 8)]
-  C --> H[[Swagger UI / OpenAPI]]
 ```
 
 ---
