@@ -60,24 +60,6 @@ CapeStoneProject_FullStack-master/
 │   └── App.jsx                   # Routes (role-based)
 └── vite.config.js
 ```
-
----
-
-## 🧱 Domain Model (ERD)
-
-
-
----
-
-## 🧭 Architecture
-## 🧭 Architecture
-<p align="center">
-  <img src="docs/architecture/payroll_architecture_ultraclean.svg" width="900" alt="Payroll Management System Architecture" />
-</p>
-
-
-```
-
 ---
 
 ## 🧪 Feature Matrix
@@ -237,24 +219,6 @@ UPDATE users SET role = 'ADMIN' WHERE username = '<your_username>';
 
 ---
 
-## 🖼️ Screens & Visuals
-
-> Add screenshots in `docs/screenshots/` and reference them here.
-
-<p align="center">
-  <img src="https://github.com/ikatyang/emoji-cheat-sheet/raw/master/public/graphics/emojis/bar_chart.png" height="20"/> 
-  <b>Dashboard</b>
-</p>
-
-| Login | Admin: Employees | Admin: Payroll |
-|---|---|---|
-| <img src="docs/screenshots/login.png" width="300" /> | <img src="docs/screenshots/admin-employees.png" width="300" /> | <img src="docs/screenshots/admin-payroll.png" width="300" /> |
-
-| Employee: My Payroll | Employee: Apply Leave | Reports |
-|---|---|---|
-| <img src="docs/screenshots/employee-payroll.png" width="300" /> | <img src="docs/screenshots/employee-apply-leave.png" width="300" /> | <img src="docs/screenshots/reports.png" width="300" /> |
-
----
 
 ## 🧰 Developer Notes
 
