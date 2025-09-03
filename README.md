@@ -70,9 +70,11 @@ CapeStoneProject_FullStack-master/
 ---
 
 ## 🧭 Architecture
+## 🧭 Architecture
 <p align="center">
-  <img src="C:\Users\Admin\Pictures\capestoneproject/payroll_architecture_min_v2.svg" width="900" alt="Payroll Management System Architecture" />
+  <img src="docs/architecture/payroll_architecture_ultraclean.svg" width="900" alt="Payroll Management System Architecture" />
 </p>
+
 
 ```
 
